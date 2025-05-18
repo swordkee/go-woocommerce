@@ -6,7 +6,7 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/swordkee/woocommerce-go/entity"
+	"github.com/swordkee/go-woocommerce/entity"
 )
 
 type webhookService service

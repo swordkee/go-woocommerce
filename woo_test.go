@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/swordkee/woocommerce-go/config"
+	"github.com/swordkee/go-woocommerce/config"
 )
 
 var wooClient *WooCommerce

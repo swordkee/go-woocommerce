@@ -3,7 +3,7 @@ package woocommerce
 import (
 	"fmt"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/swordkee/woocommerce-go/entity"
+	"github.com/swordkee/go-woocommerce/entity"
 )
 
 type systemStatusToolService service

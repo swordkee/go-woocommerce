@@ -10,7 +10,7 @@ import (
 	"github.com/hiscaler/gox/jsonx"
 	"github.com/hiscaler/gox/randx"
 	"github.com/stretchr/testify/assert"
-	"github.com/swordkee/woocommerce-go/entity"
+	"github.com/swordkee/go-woocommerce/entity"
 )
 
 func TestCouponService_All(t *testing.T) {

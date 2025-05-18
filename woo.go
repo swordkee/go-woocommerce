@@ -36,7 +36,7 @@ import (
 	"github.com/hiscaler/gox/stringx"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/json-iterator/go/extra"
-	"github.com/swordkee/woocommerce-go/config"
+	"github.com/swordkee/go-woocommerce/config"
 	"log"
 	"net"
 	"net/http"

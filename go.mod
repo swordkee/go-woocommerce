@@ -1,4 +1,4 @@
-module github.com/swordkee/woocommerce-go
+module github.com/swordkee/go-woocommerce
 
 go 1.20
 

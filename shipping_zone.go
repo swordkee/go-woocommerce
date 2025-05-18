@@ -4,7 +4,7 @@ import (
 	"fmt"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/swordkee/woocommerce-go/entity"
+	"github.com/swordkee/go-woocommerce/entity"
 )
 
 type shippingZoneService service
