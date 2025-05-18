@@ -2,6 +2,7 @@ package woocommerce
 
 import (
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/swordkee/go-woocommerce/entity"

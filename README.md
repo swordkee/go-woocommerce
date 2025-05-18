@@ -1,5 +1,4 @@
-WooCommerce SDK for golang
-==========================
+# WooCommerce SDK for golang
 
 ## Docs
 
@@ -422,7 +421,7 @@ Methods:
 
 If you have any questions or suggestions, you can:
 
-1. [Report an issue](https://github.com/swordkee/woocommerce-go/issues/new)
+1. [Report an issue](https://github.com/jmolboy/woocommerce-go/issues/new)
 2. Fork it and pull a request
 
 Thanks.

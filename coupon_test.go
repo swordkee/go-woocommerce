@@ -2,15 +2,13 @@ package woocommerce
 
 import (
 	"errors"
-	"strings"
-	"testing"
-	"time"
-
 	"github.com/brianvoe/gofakeit/v6"
 	"github.com/hiscaler/gox/jsonx"
 	"github.com/hiscaler/gox/randx"
 	"github.com/stretchr/testify/assert"
 	"github.com/swordkee/go-woocommerce/entity"
+	"strings"
+	"testing"
 )
 
 func TestCouponService_All(t *testing.T) {
@@ -38,19 +36,12 @@ func TestCouponService_One(t *testing.T) {
 func TestCouponService_Create(t *testing.T) {
 	code := strings.ToLower(randx.Letter(8, false))
 	req := CreateCouponRequest{
-		Code:               code,
-		DiscountType:       "percent",
-		Amount:             1,
-		IndividualUse:      false,
-		ExcludeSaleItems:   false,
-		MinimumAmount:      2,
-		UseageCount:        0,
-		UseageLimit:        1,
-		UseageLimitPerUser: 1,
-		FreeShipping:       true,
-		Description:        "TEST",
-		DateExpires:        time.UTC.String(),
-		EmailRestrictions:  []string{"*@gmail.com"},
+		Code:             code,
+		DiscountType:     "percent",
+		Amount:           1,
+		IndividualUse:    false,
+		ExcludeSaleItems: false,
+		MinimumAmount:    2,
 	}
 	item, err := wooClient.Services.Coupon.Create(req)
 	if err != nil {

@@ -3,7 +3,6 @@ package woocommerce
 import (
 	"errors"
 	"fmt"
-
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/swordkee/go-woocommerce/entity"
@@ -74,19 +73,12 @@ func (s couponService) One(id int) (item entity.Coupon, err error) {
 // Create
 
 type CreateCouponRequest struct {
-	Code               string   `json:"code"`
-	DiscountType       string   `json:"discount_type"`
-	Amount             float64  `json:"amount,string"`
-	IndividualUse      bool     `json:"individual_use"`
-	ExcludeSaleItems   bool     `json:"exclude_sale_items"`
-	MinimumAmount      float64  `json:"minimum_amount,string"`
-	DateExpires        string   `json:"date_expires"`
-	UseageCount        int      `json:"usage_count"`
-	UseageLimit        int      `json:"usage_limit"`
-	UseageLimitPerUser int      `json:"usage_limit_per_user"`
-	FreeShipping       bool     `json:"free_shipping"`
-	EmailRestrictions  []string `json:"email_restrictions,omitempty"`
-	Description        string   `json:"description,omitempty"`
+	Code             string  `json:"code"`
+	DiscountType     string  `json:"discount_type"`
+	Amount           float64 `json:"amount,string"`
+	IndividualUse    bool    `json:"individual_use"`
+	ExcludeSaleItems bool    `json:"exclude_sale_items"`
+	MinimumAmount    float64 `json:"minimum_amount,string"`
 }
 
 func (m CreateCouponRequest) Validate() error {

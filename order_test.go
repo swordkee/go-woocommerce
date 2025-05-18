@@ -2,9 +2,8 @@ package woocommerce
 
 import (
 	"fmt"
-	"testing"
-
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 // Query orders

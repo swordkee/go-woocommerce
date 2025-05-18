@@ -31,12 +31,6 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	"github.com/go-resty/resty/v2"
-	"github.com/hiscaler/gox/inx"
-	"github.com/hiscaler/gox/stringx"
-	jsoniter "github.com/json-iterator/go"
-	"github.com/json-iterator/go/extra"
-	"github.com/swordkee/go-woocommerce/config"
 	"log"
 	"net"
 	"net/http"
@@ -46,6 +40,13 @@ import (
 	"strings"
 	"time"
 	"unsafe"
+
+	"github.com/go-resty/resty/v2"
+	"github.com/hiscaler/gox/inx"
+	"github.com/hiscaler/gox/stringx"
+	jsoniter "github.com/json-iterator/go"
+	"github.com/json-iterator/go/extra"
+	"github.com/swordkee/go-woocommerce/config"
 )
 
 const (
@@ -109,6 +110,12 @@ type services struct {
 	SystemStatus         systemStatusService
 	SystemStatusTool     systemStatusToolService
 	Data                 dataService
+}
+
+func getBasicAuth(username, password string) string {
+	str := username + ":" + password
+	base64 := base64.StdEncoding.EncodeToString([]byte(str))
+	return fmt.Sprintf("Basic %s", base64)
 }
 
 // OAuth signature
@@ -192,9 +199,8 @@ func NewClient(config config.Config) *WooCommerce {
 					params.Add("consumer_key", config.ConsumerKey)
 					params.Add("consumer_secret", config.ConsumerSecret)
 				} else {
-					// Set to header
-					client.SetAuthScheme("Basic").
-						SetAuthToken(fmt.Sprintf("%s %s", config.ConsumerKey, config.ConsumerSecret))
+					request.Header.Add("Content-Type", "application/json")
+					request.Header.Set("Authorization", getBasicAuth(config.ConsumerKey, config.ConsumerSecret))
 				}
 			} else {
 				// oAuth

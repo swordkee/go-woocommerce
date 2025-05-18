@@ -22,6 +22,18 @@ func (s shippingZoneMethodService) All(zoneId int) (items []entity.ShippingZoneM
 	return
 }
 
+func (s shippingZoneMethodService) AllRaw(zoneId int) (raw string, err error) {
+	resp, err := s.httpClient.R().Get(fmt.Sprintf("/shipping/zones/%d/methods", zoneId))
+	if err != nil {
+		return
+	}
+
+	if resp.IsSuccess() {
+		return string(resp.Body()), nil
+	}
+	return
+}
+
 // One retrieve a shipping zone method
 func (s shippingZoneMethodService) One(zoneId, methodId int) (item entity.ShippingZoneMethod, err error) {
 	resp, err := s.httpClient.R().Get(fmt.Sprintf("/shipping/zones/%d/methods/%d", zoneId, methodId))
