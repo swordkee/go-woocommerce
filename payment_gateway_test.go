@@ -2,8 +2,8 @@ package woocommerce
 
 import (
 	"github.com/brianvoe/gofakeit/v6"
-	"github.com/hiscaler/woocommerce-go/entity"
 	"github.com/stretchr/testify/assert"
+	"github.com/swordkee/woocommerce-go/entity"
 	"testing"
 )
 

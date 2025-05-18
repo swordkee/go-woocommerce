@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/swordkee/woocommerce-go/entity"
 )
 
 type productCategoryService service

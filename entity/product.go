@@ -1,9 +1,9 @@
 package entity
 
 type ProductDimension struct {
-	Length float64 `json:"length"`
-	Width  float64 `json:"width"`
-	Height float64 `json:"height"`
+	Length string `json:"length"`
+	Width  string `json:"width"`
+	Height string `json:"height"`
 }
 
 // Product product properties
@@ -46,6 +46,7 @@ type Product struct {
 	ManageStock       bool                      `json:"manage_stock"`
 	StockQuantity     int                       `json:"stock_quantity"`
 	StockStatus       string                    `json:"stock_status"`
+	GeneratedSlug     string                    `json:"generated_slug"`
 	Backorders        string                    `json:"backorders"`
 	BackordersAllowed bool                      `json:"backorders_allowed"`
 	Backordered       bool                      `json:"backordered"`

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/swordkee/woocommerce-go/entity"
 )
 
 // https://woocommerce.github.io/woocommerce-rest-api-docs/?php#customers

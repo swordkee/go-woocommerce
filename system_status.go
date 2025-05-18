@@ -1,8 +1,8 @@
 package woocommerce
 
 import (
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+	"github.com/swordkee/woocommerce-go/entity"
 )
 
 type systemStatusService service
